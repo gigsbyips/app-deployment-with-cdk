@@ -1,7 +1,4 @@
-
-## This AWS CDK project creates typical AWS services required for deploying a Lambda function exposed via APIGW. Lmabda will access Database hosted in an Isolated Subnet of the application VPC.
-
-# AWS CDK Version 2 is used.
+# This repo is a reference for setting commonly used AWS services usign Python and CDK V2.
 
 The `cdk.json` file is used by CDK to run the application.
 
