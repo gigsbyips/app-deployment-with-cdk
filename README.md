@@ -8,17 +8,21 @@ This repo is a reference for setting commonly used AWS services using Python and
 - AWS CDK is installed. First install node.js on machine and then run `npm i -g aws-cdk `.
 - Python is installed on the machine.
 
+## Creating a CDK App locally from this repo.
 
-The `cdk.json` file is used by CDK to run the application. Context variables used by some of the stacks are listed in the `cdk.json` file. Please change the values. 
+Clone the Repo on your machine.
 
-`cdk init` will create the virtual environment OR we can create it manually as shown below-
+```
+git clone https://github.com/gigsbyips/app-infra-with-cdk.git
+cd app-infra-with-cdk
+
+```
+The `cdk.json` file is used by CDK to run the application. Context variables used by some of the stacks are listed in the `cdk.json` file. Please change their values for your work.
+
+Create and activate a python virtual environment. When we initialize a CDK app with `cdk init app --language=python`, then a virtual env is auto created for us. Here we need to create it manually.
 
 ```
 $ python -m venv .venv
-```
-Now activate the virtual environment (on Windows) by running command below-
-
-```
 % .venv\Scripts\activate.bat
 ```
 
@@ -28,14 +32,13 @@ Once the virtualenv is activated, install the required dependencies.
 $ pip install -r requirements.txt
 ```
 
-Get list of stack and synthesize the CloudFormation template.
+## Some useful commands for AWS CDK.
 
 ```
-$ cdk ls
+$ cdk ls                                                  # List all stacks
 $ cdk synth --profile <PROFILE_NAME>
+$ cdk synth <StackName> --profile <ProfileNamme>
+$ cdk diff <StackName> --profile <ProfileNamme>           # Check changeset of a particular stack.
 $ cdk deploy --profile <PROFILE_NAME>
-$ cdk ls                                                      # List all stacks
-$ cdk diff <<StackName>> --profile <<ProfileNamme>>           # Check changeset of a particular stack.
-$ cdk synth <<StackName>> --profile <<ProfileNamme>>
 
 ```
