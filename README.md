@@ -33,12 +33,12 @@ $ pip install -r requirements.txt
 ```
 
 ## Bootstrapping your AWS environment
-Deploying stacks with the CDK requires some dedicated AWS CDK resources to be provisioned like S3 bucket where the CFN templates are uploaded by CDK. The cdk bootstrap command creates the necessary resources for us.
+The bootstrap command creates some necessary resources that are used by CDK behind the scene like S3 bucket where the CloudFormation templates are uploaded by CDK.
 
 ```
 cdk bootstrap       # Deploys a stack in the account and region of the default profile
 cdk bootstrap <ACCOUNT-NUMBER/REGION>
-cdk bootstrap --profile test 1111111111/us-east-1
+cdk bootstrap --profile <test_profile> <ACCOUNT-NUMBER/REGION>
 ```
 
 ## Some useful commands for AWS CDK.
