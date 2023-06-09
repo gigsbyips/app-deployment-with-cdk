@@ -1,8 +1,10 @@
-# This repo is a reference for setting commonly used AWS services usign Python and CDK V2.
+# This repo is a reference for setting commonly used AWS services using Python and CDK V2.
+
+Context variables used for the stacks are listed in the `cdk.json` file. Please change it accordingly.
 
 The `cdk.json` file is used by CDK to run the application.
 
-"cdk init" creates a virtual environment OR we can create it manually as below-
+`cdk init` will create the virtual environment OR we can create it manually as shown below-
 
 ```
 $ python -m venv .venv
