@@ -1,15 +1,11 @@
 import aws_cdk as core
 import aws_cdk.assertions as assertions
 
-from ips_cdk_app.ips_cdk_app_stack import IpsCdkAppStack
+from stacks.vpc_stack import VPCStack
 
-# example tests. To run these tests, uncomment this file along with the example
-# resource in ips_cdk_app/ips_cdk_app_stack.py
-def test_sqs_queue_created():
+def test_vpc_created():
     app = core.App()
-    stack = IpsCdkAppStack(app, "ips-cdk-app")
+    stack = VPCStack(app, "test-vpc-stack")
     template = assertions.Template.from_stack(stack)
 
-#     template.has_resource_properties("AWS::SQS::Queue", {
-#         "VisibilityTimeout": 300
-#     })
+    template.has_resource("AWS::EC2::VPC")

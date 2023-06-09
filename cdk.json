@@ -15,6 +15,11 @@
     ]
   },
   "context": {
+    "VpcCidr": "10.0.0.0/8",
+    "prj_name":"serverless-app",
+    "env": "dev",
+    "local_ip": "192.168.X.X/32",
+    "db_user_name": "rds-admin",
     "@aws-cdk/aws-lambda:recognizeLayerVersion": true,
     "@aws-cdk/core:checkSecretUsage": true,
     "@aws-cdk/core:target-partitions": [
